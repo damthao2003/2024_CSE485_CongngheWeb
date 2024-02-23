@@ -8,7 +8,7 @@
     <title>project12</title>
     <style type="text/css">
         nav{
-            background-color:#47bdec;
+            background-color:rgb(10, 31, 119);
         }
         nav a{
             display:inline-block;
@@ -16,9 +16,16 @@
             font-size:20px;
             color:white;
             text-decoration:none;
+            text-align: center;
+            place-items: center
+
         }
         nav a:hover{
             background-color:#333;
+        }
+        a{
+            margin-left: 10px;
+            padding: 5px;
         }
     </style>
 </head>
@@ -38,8 +45,9 @@ $navItems = [
 ];
 
 echo '<nav> ';
+echo '<a><img src="project12/Picture1.png"  style="position: absolute; top: 15px; left: 10px;"> | </a>';
 foreach($navItems as $item){
-    echo "  <a>$item |</a> ";
+    echo "  <a><span>$item </span>|</a> ";
 }
 echo '</nav>';
 
