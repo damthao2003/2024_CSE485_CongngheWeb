@@ -71,6 +71,16 @@ $courses = [
                 'duration' => '2 - 2.5 năm'
         ],
 ];
+//Hiển thị danh sách khóa học
+    foreach ($courses as $course){
+        echo '<div class = "course">';
+        echo '<h2>' .$course['title'] .'</h2>';
+        echo '<p>' .$course['description'] .'</p>';
+        echo '<p> Học phí: ' .$course['fee'] . '</p>';
+        echo '<p> Khai Giảng: ' .$course['start_date'] .'</p>';
+        echo '<p> Thời Lượng: ' . $course['duration'] .'</p>';
+        echo '</div>';
+    }
 ?>
 </body>
 </html>
