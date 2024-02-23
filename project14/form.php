@@ -30,7 +30,6 @@
     <div class="basic-infor">
         <?php
            foreach ($titles as $title){
-              echo '<label for="">' $title '</label>';
            }
 
         ?>
