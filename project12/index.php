@@ -6,6 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>project12</title>
+    <style type="text/css">
+        nav{
+            background-color:#47bdec;
+        }
+        nav a{
+            display:inline-block;
+            padding:10px;
+            font-size:20px;
+            color:white;
+            text-decoration:none;
+        }
+        nav a:hover{
+            background-color:#333;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,11 +37,11 @@
        "LIÊN HỆ"
    ];
 
-   echo '<nav> <ul>';
+   echo '<nav> ';
    foreach($navItems as $item){
-       echo " <li> $item </li>";
+       echo "  <a>$item |</a> ";
     }
-   echo '</ul></nav>';
+   echo '</nav>';
 
 ?>
 
