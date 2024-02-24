@@ -8,7 +8,7 @@
     <title>project12</title>
     <style type="text/css">
         nav{
-            background-color:#47bdec;
+            background-color:rgb(10, 31, 119);
         }
         nav a{
             display:inline-block;
@@ -16,32 +16,40 @@
             font-size:20px;
             color:white;
             text-decoration:none;
+            text-align: center;
+            place-items: center
+
         }
         nav a:hover{
             background-color:#333;
+        }
+        a{
+            margin-left: 10px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
 
 <?php
-   $navItems = [
-       "GIỚI THIỆU",
-       "TIN TỨC & THÔNG BÁO",
-       "TUYỂN SINH",
-       "ĐÀO TẠO",
-       "NGHIÊN CỨU",
-       "ĐỐI NGOẠI",
-       "VĂN BẢN",
-       "SINH VIÊN",
-       "LIÊN HỆ"
-   ];
+$navItems = [
+    "GIỚI THIỆU",
+    "TIN TỨC & THÔNG BÁO",
+    "TUYỂN SINH",
+    "ĐÀO TẠO",
+    "NGHIÊN CỨU",
+    "ĐỐI NGOẠI",
+    "VĂN BẢN",
+    "SINH VIÊN",
+    "LIÊN HỆ"
+];
 
-   echo '<nav> ';
-   foreach($navItems as $item){
-       echo "  <a>$item |</a> ";
-    }
-   echo '</nav>';
+echo '<nav> ';
+echo '<a><img src="../img/Picture1.png"  style="position: absolute; top: 15px; left: 10px;"> | </a>';
+foreach($navItems as $item){
+    echo "  <a><span>$item </span>|</a> ";
+}
+echo '</nav>';
 
 ?>
 

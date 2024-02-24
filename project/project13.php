@@ -106,7 +106,7 @@ echo '</div>';
 echo '<div class ="container">';
     foreach ($courses as $course) {
         echo '<div class="course" >';
-        echo '<img src="th.jpg" width="430 " height="200"> </img>';
+        echo '<img src="../img/th.jpg" width="430 " height="200"> </img>';
         echo '<h2>' . $course['title'] . '</h2>';
         echo '<p>' . $course['description'] . '</p>';
         echo '<p>' . $course['fee'] . '</p>';
