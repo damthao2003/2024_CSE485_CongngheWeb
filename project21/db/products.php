@@ -36,28 +36,28 @@ $products = [
         "image_url" => "https://picsum.photos/id/241/200/200", // Sample image URL
     ],
     [
-        "id" => 2,
+        "id" => 6,
         "name" => "Jogger Pants (Gray)",
         "price" => 29.99,
         "description" => "Comfortable and casual jogger pants in gray color.",
         "image_url" => "https://picsum.photos/id/238/200/200", // Sample image URL
     ],
     [
-        "id" => 3,
+        "id" => 7,
         "name" => "Wireless Earbuds",
         "price" => 39.99,
         "description" => "Enjoy your music wirelessly with these high-quality earbuds.",
         "image_url" => "https://picsum.photos/id/239/200/200", // Sample image URL
     ],
     [
-        "id" => 4,
+        "id" => 8,
         "name" => "Water Bottle (Stainless Steel)",
         "price" => 19.99,
         "description" => "Durable and reusable stainless steel water bottle.",
         "image_url" => "https://picsum.photos/id/240/200/200", // Sample image URL
     ],
     [
-        "id" => 5,
+        "id" => 9,
         "name" => "Laptop Backpack",
         "price" => 69.99,
         "description" => "Spacious and comfortable backpack for carrying your laptop.",
@@ -65,11 +65,4 @@ $products = [
     ]
 ];
 
-// tham số phân trang
-$itemPerPage = 10;
-$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-// tính dữ liệu phân trang
-$totalPages = ceil($products) / $itemPerPage;
-// lấy các mục cho trang hiện tại
-$currentPageItems = array_slice($products, ($currentPage - 1)*$itemPerPage, $itemPerPage);
 ?>
