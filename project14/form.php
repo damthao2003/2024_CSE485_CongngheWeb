@@ -21,6 +21,13 @@
 
             }
         }
+        .item{
+            margin-top: 10px;
+
+            input{
+
+            }
+        }
 
     </style>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
@@ -38,8 +45,6 @@
     Islands", "Brunei",
         "Bulgaria", "Burkina Faso", "Burundi", "Vietnam"
     );
-
-
 
 ?>
 
@@ -62,7 +67,16 @@
             </div>
             <div class="item">
                 <label for="">Gender</label>
-                <input type="radio" name="gender">
+                <form class="">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="html">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="css">Female</label>
+                    <input type="radio" id="xxx" name="gender" value="XXX">
+                    <label for="javascript">XXX</label>
+                    <input type="radio" id="javascript" name="gender" value="ZZZ">
+                    <label for="javascript">ZZZ</label>
+                </form>
             </div>
             <div class="item">
                 <label for="">Title</label>
@@ -104,11 +118,11 @@
         <div class="item-content">
             <div class="item">
                 <label for="">Email</label>
-                input type="text" name="email">
+                <input type="text" name="email">
             </div>
             <div class="item">
                 <label for=""> Address</label>
-                input type="text" name="address">
+                <input type="text" name="address">
             </div>
             <div class="item">
                 <label for="">City</label>
@@ -116,7 +130,7 @@
             </div>
             <div class="item">
                 <label for="">Region</label>
-                <input type="radio" name="region">
+                <input type="text" name="region">
             </div>
             <div class="item">
                 <label for="">Postal Code</label>
@@ -138,7 +152,7 @@
             </div>
             <div class="item">
                 <label for="">Photo</label>
-                <input type="" name="photo">
+                <input type="file" name="photo">
             </div>
         </div>
     </div>
@@ -150,7 +164,7 @@
             <div class="item-content">
                 <div class="item">
                     <label for="">Notes</label>
-                    <textear id="editor"> </textear>
+                    <textear> </textear>
                     <script>
                         // Khởi tạo CKEditor cho textarea có id là 'editor'
                         CKEDITOR.replace('editor', {
@@ -163,16 +177,19 @@
 
                 <div class="item">
                     <label for="">Preferred Shift</label>
+                    <input type="checkbox" name="">
+                    <label for="">Regular</label>
                     <input type="checkbox" name="postalcode">
+                    <label for="">Gravy Yard</label>
                 </div>
 
                 <div class="item">
-                    <label for="">US Home Phone</label>
-                    <input type="number" name="brithdate">
+                    <label for="">Active?</label>
+                    <input type="checkbox" name="brithdate">
                 </div>
                 <div class="item">
                     <label for="">Photo</label>
-                    <input type="" name="photo">
+                    <input type="text" name="photo">
                 </div>
             </div>
         </div>
