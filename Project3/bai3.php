@@ -20,7 +20,6 @@
             padding: 30px;
             margin-bottom: 50px;
             margin-top: 40px;
-
         }
         .course h2 {
             color: #333;
