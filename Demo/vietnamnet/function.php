@@ -45,7 +45,7 @@ function getAllUsers()
     $conn = mysqli_connect('localhost', 'root', '', 'vietnamnet');
     if (!$conn) die("Disconnected");
 
-    $sql_users = "select * from users order by username ASC "; // sap xep theo chieu tang dan
+    $sql_users = "select * from user order by username ASC "; // sap xep theo chieu tang dan
     $result_users = mysqli_query($conn, $sql_users);
     $users = [];
     if(mysqli_num_rows($result_users)){
@@ -60,12 +60,12 @@ function addUser($username,$email, $password){
     $conn = mysqli_connect('localhost', 'root', '', 'vietnamnet');
     if (!$conn) die("Disconnected");
 
-    $sql_check = "SELECT * FROM users WHERE username = '$username' OR email= '$email'";
+    $sql_check = "SELECT * FROM user WHERE username = '$username' OR email= '$email'";
     $result = mysqli_query($conn, $sql_check);
     if(mysqli_num_rows($result) > 0){
         return false;
     }else{
-        $sql = "insert into users(username,email, password) values('$username',  '$email','$password')";
+        $sql = "insert into user(username,email, password) values('$username',  '$email','$password')";
         $result = mysqli_query($conn, $sql);
         if($result){
             return true;

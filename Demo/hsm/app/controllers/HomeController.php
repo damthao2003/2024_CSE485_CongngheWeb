@@ -6,7 +6,7 @@ class HomeController{
         // goi du lieu tu PatienService
         $patientService = new PatientService();
         $patients = $patientService->getAllPatients();
-
+//
 //        echo "<pre>";
 //        print_r($patients);
 //        echo '</pre>';

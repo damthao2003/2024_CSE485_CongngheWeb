@@ -21,21 +21,21 @@ try{
 // b2: xu ly data
 function addEmployees($id, $name, $address, $salary){
     global $pdo;
-    $sql = "Insert into employees(id, name, address, salary)";
+    $sql = "Insert into employee(id, name, address, salary)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id', 'Name', 'address', 'salary']);
 };
 
 function getAllEmployees(){
     global $pdo;
-    $stmt = $pdo->query("select * from employees");
+    $stmt = $pdo->query("select * from employee");
     return $stmt->fetchAll();
 };
 
 function updateEmployees ($id, $name, $address, $salary)
 {
     global $pdo;
-    $sql = "Update employees set Name = :name, address=:address, salary = :salary where id = :id";
+    $sql = "Update employee set Name = :name, address=:address, salary = :salary where id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['Name'=>$name, 'address'=>$address, 'salary'=>$salary, 'id'=>$id]);
 
@@ -43,7 +43,7 @@ function updateEmployees ($id, $name, $address, $salary)
 
 function deleteEmployees($id){
     global $pdo;
-    $sql = "delete from employees where id = :id";
+    $sql = "delete from employee where id = :id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id'=>id]);
 

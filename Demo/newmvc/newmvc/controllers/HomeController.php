@@ -1,5 +1,5 @@
 <?php
-include('services/PostService.php');
+include('service/PostService.php');
 class HomeController{
     //action:index = method: index
     public function index(){

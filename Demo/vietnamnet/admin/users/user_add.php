@@ -2,7 +2,7 @@
 require_once '../../function.php';
 $users = getAllUsers();
 //echo '<pre>';
-//print_r($users);
+//print_r($user);
 //echo '</pre>';
 
 ?>
