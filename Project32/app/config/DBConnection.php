@@ -15,13 +15,15 @@ class DBConnection{
 
         try{
             $this->conn = new PDO("mysql:host={$this->host}; dbname={$this->dbname}", $this->user, $this->pass);
-
         }catch (PDOException $e){
             $this->conn = null;
         }
     }
 
     public function  getConnection(){
+        if(!$this->conn){
+            die("Kết nối database thất bại: ".mysqli_error($this->conn));
+        }
         return $this->conn;
     }
 

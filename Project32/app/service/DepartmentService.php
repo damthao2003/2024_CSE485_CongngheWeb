@@ -20,7 +20,6 @@ class DepartmentService
             while ($row = $stmt->fetch()){
                 $department = new Department($row['departmentID'], $row['departmentName'], $row['address'], $row['email'], $row['phone'], $row['logo'], $row['website'], $row['parentDepartmentID']);
                 $departments[] = $department;
-
             }
             return $departments;
         }

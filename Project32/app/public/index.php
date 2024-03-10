@@ -13,9 +13,9 @@ require_once APP_ROOT.('/app/config/DBConnection.php');
 require_once APP_ROOT.'/app/controllers/DepartmentController.php';
 $departmentService = new DepartmentService();
 $departments = $departmentService->getALLDepartments();
-//echo "<pre>";
-//print_r($departments);
-//echo '</pre>';
+echo "<pre>";
+print_r($departments);
+echo '</pre>';
 
 
 require_once APP_ROOT.'/app/controllers/EmployeeController.php';
@@ -28,6 +28,6 @@ $employees = $employeeService->getALLEmployees();
 require_once APP_ROOT.'/app/controllers/UserController.php';
 $userService = new UserService();
 $user = $userService->getALLUsers();
-echo "<pre>";
-print_r($user);
-echo '</pre>';
+//echo "<pre>";
+//print_r($user);
+//echo '</pre>';
