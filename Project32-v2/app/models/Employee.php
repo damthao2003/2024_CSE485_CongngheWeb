@@ -22,6 +22,8 @@ class Employee
         $this->departmentId = $departmentId;
     }
 
+
+
     public function getEmployeeId()
     {
         return $this->employeeId;

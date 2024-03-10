@@ -11,7 +11,7 @@ class DepartmentController
 //        echo "<pre>";
 //        print_r($departments);
 //        echo '</pre>';
-//        include APP_ROOT . '/app/views/department/index.blade.php';
+        include APP_ROOT . '/app/views/department/index.blade.php';
 
     }
 
