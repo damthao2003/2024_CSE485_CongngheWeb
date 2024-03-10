@@ -1,7 +1,4 @@
 <?php
-
-use Demo\newmvc\newmvc\controllers\HomeController;
-
 require_once ('../app/config/config.php');
 require_once APP_ROOT.'/app/libs/DBConnection.php';
 
