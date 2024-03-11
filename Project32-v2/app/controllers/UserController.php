@@ -9,7 +9,7 @@ class UserController
 
         // check thu data dc lay ra chua
 
-        include APP_ROOT . '/app/views/user/index.blade.php';
+        include APP_ROOT . '/app/views/user/setting-profile.blade.php';
 
     }
 

@@ -9,7 +9,7 @@ class EmployeeController
 
         // check thu data dc lay ra chua
 
-        include APP_ROOT . '/app/views/employee/index.blade.php';
+        include APP_ROOT . '/app/views/employee/setting-profile.blade.php';
 
     }
 
