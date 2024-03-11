@@ -11,7 +11,7 @@ class DepartmentService
 
         //B2: truy vấn dữ liệu
         if($conn != null){
-            $sql = 'select * from departments';
+            $sql = 'select * from department';
             $stmt = $conn->query($sql); // stmt la 1 object
 
             //B3: xử lý data dc lấy ra
