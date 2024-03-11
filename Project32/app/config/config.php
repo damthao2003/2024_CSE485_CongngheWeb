@@ -13,5 +13,5 @@ define('DOMAIN', 'http://localhost/Project32/');
 define('DEFAULT_CONTROLLER', 'home');
 define('Default_ACTION','index');
 
-
+echo APP_ROOT;
 
