@@ -3,20 +3,23 @@ require_once ('../config/config.php');
 require_once APP_ROOT.('/app/config/DBConnection.php');
 
 //echo APP_ROOT;
-//$controller = isset($_GET['controller']) ? $_GET['controller'] : 'home';
+//$controller = isset($_GET['controller']) ? $_GET['controller'] : 'department';
 //$action = isset($_GET['action']) ? $_GET['action'] : 'index';
-
+//
 //if($controller == 'home'){
+//    require_once APP_ROOT.'/app/controllers/DepartmentController.php';
+//    $departmentService = new DepartmentService();
+//    $departments = $departmentService->getALLDepartments();
 //
+//}else if($controller == '')
 //
-//}
+
 require_once APP_ROOT.'/app/controllers/DepartmentController.php';
 $departmentService = new DepartmentService();
 $departments = $departmentService->getALLDepartments();
-echo "<pre>";
-print_r($departments);
-echo '</pre>';
-
+//echo "<pre>";
+//print_r($departments);
+//echo '</pre>';
 
 require_once APP_ROOT.'/app/controllers/EmployeeController.php';
 $employeeService = new EmployeeService();
