@@ -14,12 +14,31 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<div class="container mt-3">
-    <div class="row">
-        <button class="btn btn-warning">Thêm</button>
-
+<div class="container mt-3" >
+    <div class="row col-3 button-add">
+        <a href="<?= DOMAIN.''?>" class="btn btn-warning">Thêm</a>
     </div>
-    <div class="row">
+    <div class="row mt-3">
+        <table class="table table-bordered table-sm">
+            <?php foreach ($departments as $department){ ?>
+                <thead style="background-color: #151A46">
+                <tr>
+                    <th> <?= $department->getDepartmentId(); ?> </th>
+                    <th> <?=  $department->getDepartmentName() ?></th>
+                    <th> Thông tin đơn vị</th>
+                    <th> Thao tác</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td> Mã: <?= ?> </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+           <?php } ?>
+            </tbody>
+        </table>
 
     </div>
 </div>
