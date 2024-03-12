@@ -8,9 +8,9 @@ class DepartmentController
         $departments = $departmentService->getALLDepartments();
 
         // check thu data dc lay ra chua
-//        echo "<pre>";
-//        print_r($departments);
-//        echo '</pre>';
+        echo "<pre>";
+        print_r($departments);
+        echo '</pre>';
         include APP_ROOT . '/app/views/admin-views/department/index.blade.php';
 
     }
