@@ -8,8 +8,11 @@ class UserController
         $users = $userService->getALLUsers();
 
         // check thu data dc lay ra chua
+//        echo '<pre>';
+//        print_r($users);
+//        echo '</pre>';
 
-        include APP_ROOT . '/app/views/user/setting-profile.blade.php';
+        include APP_ROOT . '/app/views/user-views/user/setting-profile.blade.php';
 
     }
 

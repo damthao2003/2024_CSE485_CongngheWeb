@@ -18,11 +18,11 @@ $departmentController = new DepartmentController();
 $departmentController->index();
 
 
-require_once APP_ROOT.'/app/controllers/EmployeeController.php';
-$employeeController = new EmployeeController();
-$employeeController->index();
-
-
-require_once APP_ROOT.'/app/controllers/UserController.php';
-$userController = new UserController();
-$userController->index();
+//require_once APP_ROOT.'/app/controllers/EmployeeController.php';
+//$employeeController = new EmployeeController();
+//$employeeController->index();
+//
+//
+//require_once APP_ROOT.'/app/controllers/UserController.php';
+//$userController = new UserController();
+//$userController->index();
