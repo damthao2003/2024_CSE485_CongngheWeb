@@ -18,20 +18,33 @@
             align-items: center; /* Căn giữa theo chiều dọc */
             margin-top: 80px;
         }
-        .btn{
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            bottom: 100px;
-            margin-right: 160px;
-            right: 0;
-        }
-        button{
-            height: 40px;
-            width: 60px;
+        /*.btn{*/
+        /*    padding: 10px 20px;*/
+        /*    border: none;*/
+        /*    position: absolute;*/
+        /*    bottom: 50px;*/
+        /*    margin-right: 90px;*/
+        /*    right: 0;*/
+        /*}*/
+        .btn.btn-button1 {
             background-color: #151A46;
             color: white;
+            padding: 10px 20px; /* Khoảng cách padding */
+            border: none; /* Loại bỏ viền */
+            border-radius: 5px; /* Bo tròn góc */
+            position: fixed; /* Đặt vị trí cố định */
+            bottom: 60px; /* Cách lề dưới 20px */
+            right: 190px; /* Cách lề phải 20px */
+        }
+        .btn.btn-button2 {
+            background-color: #151A46;
+            color: white;
+            padding: 10px 20px;
+            border: none; /* Loại bỏ viền */
+            border-radius: 5px; /* Bo tròn góc */
+            position: fixed; /* Đặt vị trí cố định */
+            bottom: 60px; /* Cách lề dưới 20px */
+            right: 110px; /* Cách lề phải 20px */
         }
         .item-content{
             margin: 10px 20px ;
@@ -53,7 +66,7 @@
         h3{
             position: absolute;
             top: 300px; /* Cách top là 100px */
-            left: 210px;
+            left: 200px;
         }
         button#additionalButton {
             margin-top: 20px; /* Khoảng cách giữa nút và h3 */
@@ -61,7 +74,11 @@
             top: 330px; /* Cách top là 100px */
             left: 220px;
             height: 40px;
-            width: 80px;
+            width: 100px;
+            cursor: pointer;
+            background-color: #151A46;
+            color: white;
+            border-radius: 5px;
         }
         .avatar-image {
             top: 100px; /* Cách top là 100px */
@@ -79,35 +96,40 @@
 
         <div class="container">
             <div class="avatar">
-                <img src="image/th.jpg" alt="Avatar" class="avatar-image">
-                <h3>Mã Nhân Viên</h3>
-                <button id="additionalButton">Thay Ảnh</button> <!-- Thêm nút bên dưới h3 -->
+                <?php
+                $imagePath = "https://img6.thuthuatphanmem.vn/uploads/2022/11/18/anh-avatar-don-gian-cho-nu_081757692.jpg";
+                ?>
+                <img src="<?php echo $imagePath; ?>" alt="Avatar" class="avatar-image"">
+                <h3 style="font-size: 20px">Mã Nhân Viên: <?php echo $employee->getEmployeeId(); ?></h3>
+                <button id="additionalButton">Thay Ảnh</button>
             </div>
+
                 <div class="item-content">
                 <div class = "item">
                     <label for = "">Tên: </label>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="<?php echo $employee->getFullName(); ?>">
                 </div>
                 <div class = "item">
                     <label for="">Địa Chỉ: </label>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="<?php echo $employee -> getAddress(); ?>">
                 </div>
                 <div class="item">
                     <label for="">Email: </label>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="<?php echo $employee -> getEmail(); ?>">
                 </div>
                 <div class="item">
                     <label for="">Số Điện Thoại: </label>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="<?php echo $employee -> getMobilePhone(); ?>">
                 </div>
                 <div class="item">
                     <label for="">Chức Vụ: </label>
-                    <input type="text">
+                    <input type="text" placeholder="<?php echo $employee -> getPosition(); ?>">
+                </div>
                 </div>
         </div>
-    <div class="btn">
-        <button id="saveButton">Lưu</button>
-        <button id="cancelButton">Hủy</button>
-    </div>
+
+        <a href="<?= DOMAIN.'app/views/user-views/employee/index.blades.php' ?>" class='btn btn-button1'>Lưu</a>
+        <a href="<?= DOMAIN.'app/views/user-views/department/index.blades.php' ?>" class='btn btn-button2'>Hủy</a>
+
 </body>
 </html>

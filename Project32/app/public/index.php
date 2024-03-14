@@ -13,15 +13,18 @@ require_once APP_ROOT.('/app/config/DBConnection.php');
 //}else if($controller == '')
 //
 
-require_once APP_ROOT.'/app/controllers/DepartmentController.php';
-$departmentController = new DepartmentController();
-$departmentController->index();
+//require_once APP_ROOT.'/app/controllers/DepartmentController.php';
+//$departmentController = new DepartmentController();
+//$departmentController->index();
 
 
-//require_once APP_ROOT.'/app/controllers/EmployeeController.php';
-//$employeeController = new EmployeeController();
-//$employeeController->index();
-//
+require_once APP_ROOT.'/app/controllers/EmployeeController.php';
+$employeeController = new EmployeeController();
+
+// Lấy dữ liệu nhân viên theo ID
+$employeeId = 5; // Thay đổi ID theo nhu cầu của bạn
+$employee = $employeeController->getEmployeeById($employeeId);
+
 //
 //require_once APP_ROOT.'/app/controllers/UserController.php';
 //$userController = new UserController();

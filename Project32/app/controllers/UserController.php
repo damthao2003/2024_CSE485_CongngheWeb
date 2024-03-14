@@ -12,7 +12,7 @@ class UserController
 //        print_r($users);
 //        echo '</pre>';
 
-        include APP_ROOT . '/app/views/user-views/user/setting-profile.blade.php';
+        include APP_ROOT . '/app/views/user-views/user/setting-profile.php';
 
     }
 
