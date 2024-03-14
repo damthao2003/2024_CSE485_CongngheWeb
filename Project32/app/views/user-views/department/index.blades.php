@@ -12,13 +12,6 @@
             height: 20px;
             color: #151A46; /* Đổi màu nền của đường kẻ ngang */
         }
-        h4{
-            margin-left: 60px;
-        }
-        img{
-            top: 15px;
-            position: absolute;
-        }
         .container{
             margin-top: 20px;
         }
@@ -49,46 +42,103 @@
             cursor: pointer;
             bottom: 100px;
         }
+        .pagination {
+            margin-top: 15px;
+        }
+        .page-btn {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .page-btn:hover {
+            background-color: #f0f0f0;
+        }
 
     </style>
 </head>
 <body>
 <div class="container">
-    <img src="image/logo.jpg" width="50" height="40" >
-    <h4>Danh Bạ</h4>
+    <h4 style="font-size: 30px; color: #151A46">Danh Bạ Đơn Vị</h4>
     <hr>
     <table class="customers">
+        <?php
+
+        $rowsPerPage = 10;
+
+        $totalPages = ceil(count($departments) / $rowsPerPage);
+
+        $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+
+        $startIndex = ($currentPage - 1) * $rowsPerPage;
+        $endIndex = $startIndex + $rowsPerPage;
+
+        $index = 1;
+        for ($i = $startIndex; $i < $endIndex && $i < count($departments); $i++) {
+            $department = $departments[$i];
+            ?>
         <tr class="table-title">
-            <td width="35" class="text-center">1</td>
+            <td width="35" class="text-center"><?= $index; ?></td>
             <td width="250">Khoa Công Nghê Thông Tin</td>
             <td>Thông tin Đơn Vị</td>
         </tr>
         <tr>
-            <td rowspan="3"></td>
-            <td rowspan="3" style="padding: 10px 30px 10px 10px; max-width: 140px;">
+            <td rowspan="4"></td>
+            <td rowspan="4" style="padding: 10px 30px 10px 10px; max-width: 140px;">
                 <img class="img-fluid" src="">
+                <a style="text-align: center;  display: block;" href="<?= DOMAIN.'app/views/user-views/employee/index.blades.php'; ?>"><?= $department -> getDepartmentId(); ?></a>
             </td>
             <td>
-                <b>Số Điện Thoại: </b>
-                "0332019523"
+                <b>Số điện thoại: <?= $department -> getPhone(); ?> </b>
             </td>
         </tr>
         <tr>
             <td>
-                <b>Email: </b>
-                "quynhhuong6319@gmail.com"
+                <b>Email: <?= $department -> getEmail(); ?>  </b>
             </td>
         </tr>
         <tr>
             <td>
                 <b>Địa Chỉ: </b>
-                "175 Tây Sơn"
+                <?= $department -> getAddress(); ?>
             </td>
         </tr>
+            <tr>
+                <td>
+                    <b>Website: </b>
+                    <?= $department -> getWebsite(); ?>
+                </td>
+            </tr>
+        <?php
+            $index++;
+        }
+        ?>
+    </table>
+    <!-- Phân trang -->
+    <div class="pagination">
+        <?php
+
+        for ($page = 1; $page <= $totalPages; $page++) {
+            echo '<a href="?page=' . $page . '" class="page-btn">' . $page . '</a>';
+        }
+        // Nút "Next"
+        if ($currentPage < $totalPages) {
+            $nextPage = $currentPage + 1;
+            echo '<a href="?page=' . $nextPage . '" class="page-btn">Next</a>';
+        }
+        ?>
+    </div>
 </div>
-<div class="view-more">
-    <button class="view-more-btn">Xem Thêm</button>
-</div>
+<!--<div class="view-more">-->
+<!--    <button class="view-more-btn">Xem Thêm</button>-->
+<!--</div>-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

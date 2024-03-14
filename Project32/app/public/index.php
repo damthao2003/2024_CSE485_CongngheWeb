@@ -14,14 +14,14 @@ require_once APP_ROOT.('/app/config/DBConnection.php');
 //}else if($controller == '')
 //
 
-//require_once APP_ROOT.'/app/controllers/DepartmentController.php';
-//$departmentController = new DepartmentController();
-//$departmentController->index();
+require_once APP_ROOT.'/app/controllers/DepartmentController.php';
+$departmentController = new DepartmentController();
+$departmentController->index();
 
 
-require_once APP_ROOT.'/app/controllers/EmployeeController.php';
-$employeeController = new EmployeeController();
-$employeeController->index(); // mk baảo nó là chạy ở đây mà
+//require_once APP_ROOT.'/app/controllers/EmployeeController.php';
+//$employeeController = new EmployeeController();
+//$employeeController->index();
 
 //
 //require_once APP_ROOT.'/app/controllers/UserController.php';
