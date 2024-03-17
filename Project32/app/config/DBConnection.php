@@ -27,4 +27,8 @@ class DBConnection{
         return $this->conn;
     }
 
+    public function query($sql){
+
+    }
+
 }

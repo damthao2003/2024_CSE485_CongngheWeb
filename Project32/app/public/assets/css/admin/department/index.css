@@ -1,4 +1,31 @@
-.button-add butto{
-    font-size: 25px;
-
+.button-add a{
+    font-size: 15px;
+    font-weight: 500;
+    width: 120px;
+}
+table {
+    width: 100%;
+}
+thead {
+    background-color: #151A46;
+    height: 30px;
+    color: white;
+}
+th{
+    text-align: center;
+}
+.departmentId {
+    margin: auto 100px;
+    text-decoration: none;
+}
+.departmentId a{
+    text-decoration: none;
+}
+.infor p,hr{
+    margin-left: 7px;
+}
+.btn-ed a{
+    width: max-content;
+    display: flex;
+    margin: 15px auto;
 }
