@@ -1,5 +1,5 @@
 <?php
-require_once ('../config/config.php');
+require_once ('../app/config/config.php');
 require_once APP_ROOT.'/app/service/EmployeeService.php';
 class EmployeeController
 {

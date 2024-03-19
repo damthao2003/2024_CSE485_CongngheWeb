@@ -1,6 +1,6 @@
 <?php
 require_once ('../config/config.php');
-require_once APP_ROOT.('/app/config/DBConnection.php');
+require_once APP_ROOT.('/app/lib/DBConnection.php');
 //require_once APP_ROOT.('/app/controllers/EmployeeController.php');
 
 //echo APP_ROOT;

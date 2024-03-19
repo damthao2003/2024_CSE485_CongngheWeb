@@ -1,11 +1,17 @@
 <?php
 
-class DBConnection{
+namespace config;
+use lib\PDO;
+use lib\PDOException;
+
+class DBConnection
+{
     private $host;
     private $user;
     private $pass;
     private $dbname;
     private $conn;
+
     public function __construct()
     {
         $this->host = DB_HOST;
@@ -13,16 +19,17 @@ class DBConnection{
         $this->pass = DB_PASS;
         $this->dbname = DB_NAME;
 
-        try{
+        try {
             $this->conn = new PDO("mysql:host={$this->host}; dbname={$this->dbname}", $this->user, $this->pass);
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             $this->conn = null;
         }
     }
 
-    public function  getConnection(){
-        if(!$this->conn){
-            die("Kết nối database thất bại: ".mysqli_error($this->conn));
+    public function getConnection()
+    {
+        if (!$this->conn) {
+            die("Kết nối database thất bại: " . mysqli_error($this->conn));
         }
         return $this->conn;
     }

@@ -66,7 +66,7 @@
 </head>
 <body>
 <div class="container">
-    <h4 style="font-size: 30px; color: #151A46">Danh Bạ Đơn Vị</h4>
+    <h4 style="font-size: 10px; color: #151A46">Danh Bạ Đơn Vị</h4>
     <hr>
     <table class="customers">
         <?php

@@ -1,4 +1,7 @@
 <?php
+
+use lib\DBConnection;
+
 require_once APP_ROOT.'/app/models/Department.php';
 
 class DepartmentService

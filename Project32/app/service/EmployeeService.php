@@ -1,4 +1,7 @@
 <?php
+
+use lib\DBConnection;
+
 require_once ('../config/config.php');
 require_once APP_ROOT.'/app/models/Employee.php';
 class EmployeeService
